@@ -84,7 +84,7 @@ class App extends React.Component {
       }           
       empleables(estudiantes){
             console.log("empleables");
-                  
+
       }
 
       render(){
@@ -98,10 +98,10 @@ class App extends React.Component {
                         <section className="container">
                               <div className="row">
                                     <div className="col s2 offset-s1">
-                                          <button onClick={(e)=>{this.agregarEstudiante()}} id="agregar" className="btn-large grey darken-3">Agregar Estudiante</button>
+                                          <button onClick={(e)=>{this.agregarEstudiante()}} id="agregar" className="btn-large grey darken-3">Agregar</button>
                                     </div>
                                     <div className="col s2 offset-s1">
-                                          <button onClick={(e) =>{this.mostrarTodos()}} id="mostrar" className="btn-large grey darken-3">Mostrar Lista</button>
+                                          <button onClick={(e) =>{this.mostrarTodos()}} id="mostrar" className="btn-large grey darken-3">Mostrar</button>
                                     </div>
                                     <div className="col s2 offset-s1">
                                           <button onClick={(e)=>{this.actualizar()}} id="top-tecnico" className="btn-large grey darken-3">Actualizar</button>
