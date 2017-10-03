@@ -59,7 +59,6 @@ class App extends React.Component {
             });   
       }
       mostrarLista(estudiantes){
-            console.log(this.state.estudiantes);
             return (
                   estudiantes.map((estudiante, index)=>{
                         return(
@@ -80,11 +79,20 @@ class App extends React.Component {
             );
       }
       actualizar(){
-            console.log("actualizar")
-      }           
-      empleables(estudiantes){
-            console.log("empleables");
+            console.log("actualizar");
 
+      }           
+      empleables(){
+            let filtro = this.arrEstudiantes.filter(function (estudiante) {
+                  return estudiante.promedio >= 70;
+              });
+              this.arrEstudiantes = filtro;
+              this.state = {
+                  estudiantes : this.arrEstudiantes,
+                  estudianteMostrar : null
+            }
+            console.log(this.state.estudiantes);
+            console.log(this.arrEstudiantes);
       }
 
       render(){
@@ -115,7 +123,7 @@ class App extends React.Component {
                               <hr/>
                               <h4 className="center-align">Resultado</h4>
                               <div>{this.mostrarAgregado(this.state.estudianteMostrar)}</div>
-                              <div>{this.mostrarLista(this.state.estudiantes)}</div>
+                              <div>{this.mostrarLista(this.state.estudiantes)}</div>  
                         </section>
                   </div>
             );
